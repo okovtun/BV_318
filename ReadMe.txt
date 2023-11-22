@@ -1,6 +1,8 @@
 ﻿https://github.com/okovtun/BV_318.git
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIPr0w-njMVR2sWVWf6cWlqL
 
+IEEE-754:http://www.softelectro.ru/ieee754.html
+
 TODO:
 1. Выучить теорию по типам данных;
 
