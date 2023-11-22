@@ -5,6 +5,8 @@ IEEE-754:http://www.softelectro.ru/ieee754.html
 
 TODO:
 1. Выучить теорию по типам данных;
+2. Решить все задачи из файла:
+	https://github.com/okovtun/BV_318/blob/master/DataTypes/VariablesTask.pdf
 
 DONE:
 1. Выучить теорию;
