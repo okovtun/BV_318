@@ -4,6 +4,9 @@ https://www.youtube.com/playlist?list=PLeqyOOqxeiIPr0w-njMVR2sWVWf6cWlqL
 IEEE-754:http://www.softelectro.ru/ieee754.html
 
 TODO:
+Ребят, пока учим теорию.
+
+DONE:
 1. Выучить теорию по типам данных;
 2. Решить все задачи из файла:
 	https://github.com/okovtun/BV_318/blob/master/DataTypes/VariablesTask.pdf
