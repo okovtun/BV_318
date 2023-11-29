@@ -4,7 +4,7 @@ https://www.youtube.com/playlist?list=PLeqyOOqxeiIPr0w-njMVR2sWVWf6cWlqL
 IEEE-754:http://www.softelectro.ru/ieee754.html
 
 TODO:
-Ребят, пока учим теорию.
+https://legacy.cplusplus.com/doc/tutorial/constants/
 
 DONE:
 1. Выучить теорию по типам данных;
