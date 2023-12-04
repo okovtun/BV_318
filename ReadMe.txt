@@ -1,9 +1,35 @@
 ﻿https://github.com/okovtun/BV_318.git
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIPr0w-njMVR2sWVWf6cWlqL
 
-IEEE-754:http://www.softelectro.ru/ieee754.html
 
 TODO:
+0. Выучить теорию!!!
+	Следующие задачи нужно решить без компилятора:
+1. Что будет выведено на экран:
+	int i = 0;
+	i = ++i + ++i;
+	cout << i << endl;
+2. Что будет выведено на экран:
+	int i = 0;
+	i = i++ + ++i;
+	cout << i << endl;
+3. Что будет выведено на экран:
+	int i = 0;
+	i = i++ + 1 + ++i * 2;
+	cout << i << endl;
+4. Что будет выведено на экран:
+	int i = 0;
+	i = i++ + 1 + ++i *= 2;
+	cout << i << endl;
+5. Что будет выведено на экран:
+	int i = 0;
+	i += i++ + 1 + ++i *= 2;
+	cout << i << endl;
+
+DONE:
+IEEE-754:http://www.softelectro.ru/ieee754.html
+
+DONE:
 https://legacy.cplusplus.com/doc/tutorial/constants/
 
 DONE:
