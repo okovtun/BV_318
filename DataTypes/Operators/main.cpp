@@ -7,7 +7,10 @@ using std::endl;
 //#define ARITHMETICAL_OPERATORS	//1)Арифметические операторы
 //#define ASSIGNMENT_OPERATOR		//2) Оператор присваивания
 //#define INCREMENT_DECREMENT		//3)Increment/Decrement (++/--)
-#define COMPOUND_ASSIGNMENTS	//4) Составные присваивания
+//#define COMPOUND_ASSIGNMENTS		//4) Составные присваивания
+//#define HOME_WORK
+#define COMPARISON_OPERATORS		//5) Операторы сравнения
+#define LOGICAL_OPERATORS			//6) Логические операторы
 
 void main()
 {
@@ -72,4 +75,57 @@ void main()
 	a = a % b;	a %= b;
 #endif // COMPOUND_ASSIGNMENTS
 
+#ifdef HOME_WORK
+	//Task1:
+	/*int i = 0;
+	i = ++i + ++i;
+	cout << i << endl;*/
+
+	//Task2:
+	/*int i = 0;
+	i = i++ + ++i;
+	cout << i << endl;*/
+
+	//Task3:
+	/*int i = 0;
+	i = i++ + 1 + ++i * 2;
+	cout << i << endl;*/
+
+	//Task4:
+	/*int i = 0;
+	i = i++ + 1 + (++i *= 2);
+	cout << i << endl;*/
+
+	//Task5:
+	/*int i = 0;
+	i += i++ + 1 + (++i *= 2);
+	cout << i << endl;*/
+
+	//Task6:
+	/*int i = 0;
+	i *= i++ + 1 + (++i += 2);
+	cout << i << endl;*/
+
+
+#endif // HOME_WORK
+	
+#ifdef LOGICAL_OPERATORS
+	//cout << (!true == false) << endl;
+	//cout << !false << endl;
+
+	//bool passport = true;
+	//bool driver_licence = false;
+	//bool student_licence = false;
+	//cout << (passport || driver_licence || student_licence) << endl;
+
+	bool passport = false;
+	bool medical_conclusion = true;
+	bool psycho = true;
+	bool narco = true;
+	cout << (passport && medical_conclusion && psycho && narco) << endl;
+	cout << ((true || true) && true) << endl;
+#endif // LOGICAL_OPERATORS
+	//			!  - NOT;
+	//			&& - AND;
+	//			|| - OR;
 }
