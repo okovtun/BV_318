@@ -9,8 +9,9 @@ using std::endl;
 //#define INCREMENT_DECREMENT		//3)Increment/Decrement (++/--)
 //#define COMPOUND_ASSIGNMENTS		//4) Составные присваивания
 //#define HOME_WORK
-#define COMPARISON_OPERATORS		//5) Операторы сравнения
-#define LOGICAL_OPERATORS			//6) Логические операторы
+//#define COMPARISON_OPERATORS		//5) Операторы сравнения
+//#define LOGICAL_OPERATORS			//6) Логические операторы
+#define LOGICAL_TASKS
 
 void main()
 {
@@ -58,9 +59,9 @@ void main()
 	//i--;	//Postfixo (suffixo) decremento
 	//cout << i << endl;
 	//cout << "\n----------------------\n";
-	
+
 	int j = ++i;
-	
+
 
 	cout << i << "\t" << j << endl;
 #endif // INCREMENT_DECREMENT
@@ -108,7 +109,7 @@ void main()
 
 
 #endif // HOME_WORK
-	
+
 #ifdef LOGICAL_OPERATORS
 	//cout << (!true == false) << endl;
 	//cout << !false << endl;
@@ -128,4 +129,24 @@ void main()
 	//			!  - NOT;
 	//			&& - AND;
 	//			|| - OR;
+
+#ifdef LOGICAL_TASKS
+	//Task_1:
+	/*int i = 0;
+	if (++i && i++)
+	{
+		cout << i << endl;
+	}
+	cout << i << endl;*/
+
+	//Task_2:
+	/*int i = 0;
+	if (++i || i++)
+	{
+		cout << i << endl;
+	}
+	cout << i << endl;*/
+#endif // LOGICAL_TASKS
+
+
 }
