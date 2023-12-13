@@ -2,6 +2,9 @@
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIPr0w-njMVR2sWVWf6cWlqL
 
 TODO:
+Повторить всю теорию!!!
+
+DONE:
 1. Обеспечить единственное/множественное число при вводе температуры:
 	 1 градус;
 	 2 градуса;
