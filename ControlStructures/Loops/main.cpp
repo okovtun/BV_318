@@ -1,13 +1,15 @@
 ﻿//Loops
 #include<iostream>
+#include<conio.h>
 using namespace std;
 
-#define WHILE_1
+//#define WHILE_1
 #define WHILE_2
 
 void main()
 {
 	setlocale(LC_ALL, "");
+
 #ifdef WHILE_1
 	int i = 0;	//счетчик цикла
 	int n;		//количество итераций
@@ -21,6 +23,16 @@ void main()
 	}
 #endif // WHILE_1
 
+	char key;
+	do
+	{
+		key = _getch();	
+		//Функция '_getch()' ожидает нажатие клавиши и возвращае ASCII-код нажатой клавиши.
+		//Функция '_getch()' объявлениа в библиотеке <conio.h>
+		cout << (int)key << "\t" << key << endl;
+		//(int)key - это явное преобразование переменной 'key' в тип данных 'int' 
+		//для того чтобы увидеть ASCII-код сивола, хранящегося в переменной 'key'
+	} while (key != 27);
 }
 
 /*
