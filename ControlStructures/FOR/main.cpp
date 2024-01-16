@@ -9,6 +9,10 @@ using std::endl;
 //#define FOR_DEBUG
 //#define FACTORIAL
 //#define POWER
+//#define FIBONACCI
+//#define SIMPLE_NUMBERS
+#define MULTIPLICATION_TABLE
+#define PYTHAGORAS_TABLE
 
 void main()
 {
@@ -78,16 +82,55 @@ void main()
 	}
 	cout << N << endl;
 #endif // POWER
+
+#ifdef FIBONACCI
 	//int a, b, c;
 	int n;
 	cout << "Введите предельное число:"; cin >> n;
-	for (int a = 0, b = 1, c = a + b; a < n; a = b, b = c, c = a + b)
+	//for (int a = 0, b = 1, c = a + b; a < n; a = b, b = c, c = a + b)
+	for (int a = 0, b = 1, c = a + b; a < n; c = (a = b) + (b = c))
 	{
 		cout << a << "\t";
 		//Оператор "запятая" (coma operator) - позволяет в том месте где ожидается одно выражение написать несколько выражений.
 		//Эти выражения будут выполняться последовательно слева направо, и оператор "запятая" вернет значение последнего выражения.
 	}
 	cout << endl;
+	for (int a = 0, b = 1; a < n; b = a + b, a = b - a)
+		cout << a << "\t";
+	cout << endl;
+#endif // FIBONACCI
+
+#ifdef SIMPLE_NUMBERS
+	int n;
+	cout << "Введите предел: "; cin >> n;
+	for (int i = 0; i <= n; i++)
+	{
+		bool simple = true;	//Предполагаем что число простое,
+		//но это нужно проветрить:
+		for (int j = 2; j < i; j++)
+		{
+			if (i % j == 0)
+			{
+				simple = false;
+				break;	//ключевое слово 'break' прерывает текущую итерцию, и все последующие.
+			}
+		}
+		if (simple)cout << i << "\t";
+	}
+	cout << endl;
+#endif // SIMPLE_NUMBERS
+
+#ifdef MULTIPLICATION_TABLE
+	int n = 10;
+	for (int i = 1; i <= n; i++)
+	{
+		for (int j = 1; j <= n; j++)
+		{
+			cout << i << " * " << j << " = " << i * j << endl;
+		}
+	}
+#endif // MULTIPLICATION_TABLE
+
 }
 
 //for (counter; condition; expression)
