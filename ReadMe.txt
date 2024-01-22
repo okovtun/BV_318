@@ -1,10 +1,17 @@
 ﻿https://github.com/okovtun/BV_318.git
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIPr0w-njMVR2sWVWf6cWlqL
 
+TODO:
+1. https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/ChessBoard.jpg;
+2. https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/HardChess.jpg;
+	Эту шахматную доску написать только при помощи двух циклов.
+3. Вывести в консоль треугольник Паскаля;
+4. Зарегистрироваться на github.com;
+
 Hardcore:
 Построить ряд Фибоначчи при помощи двух переменных.
 
-TODO:
+DONE:
 В проете 'FOR' решить следующие задачи:
 1. Вычислить факториал числа введенного с клавиатуры.
    Факториал - это произведение ряда чисел от 1 до указанного
