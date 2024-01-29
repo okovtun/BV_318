@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HardChess", "HardChess\Hard
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BitwizeOperations", "BitwizeOperations\BitwizeOperations.vcxproj", "{A365E418-FE30-47A7-B900-5D44DEB3CC54}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PascalTriangle", "PascalTriangle\PascalTriangle.vcxproj", "{0C080892-F3C1-4DE0-9BCA-123BC5A9FE1B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -131,6 +133,14 @@ Global
 		{A365E418-FE30-47A7-B900-5D44DEB3CC54}.Release|x64.Build.0 = Release|x64
 		{A365E418-FE30-47A7-B900-5D44DEB3CC54}.Release|x86.ActiveCfg = Release|Win32
 		{A365E418-FE30-47A7-B900-5D44DEB3CC54}.Release|x86.Build.0 = Release|Win32
+		{0C080892-F3C1-4DE0-9BCA-123BC5A9FE1B}.Debug|x64.ActiveCfg = Debug|x64
+		{0C080892-F3C1-4DE0-9BCA-123BC5A9FE1B}.Debug|x64.Build.0 = Debug|x64
+		{0C080892-F3C1-4DE0-9BCA-123BC5A9FE1B}.Debug|x86.ActiveCfg = Debug|Win32
+		{0C080892-F3C1-4DE0-9BCA-123BC5A9FE1B}.Debug|x86.Build.0 = Debug|Win32
+		{0C080892-F3C1-4DE0-9BCA-123BC5A9FE1B}.Release|x64.ActiveCfg = Release|x64
+		{0C080892-F3C1-4DE0-9BCA-123BC5A9FE1B}.Release|x64.Build.0 = Release|x64
+		{0C080892-F3C1-4DE0-9BCA-123BC5A9FE1B}.Release|x86.ActiveCfg = Release|Win32
+		{0C080892-F3C1-4DE0-9BCA-123BC5A9FE1B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
