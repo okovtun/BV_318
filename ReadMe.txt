@@ -1,7 +1,12 @@
 ﻿https://github.com/okovtun/BV_318.git
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIPr0w-njMVR2sWVWf6cWlqL
 
+!!!		С сегодняшнего дня все домашние задания отправляются в виде ссылки на GitHub	!!!
+
 TODO:
+1. 
+
+DONE:
 1. https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/ChessBoard.jpg;
 2. https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/HardChess.jpg;
 	Эту шахматную доску написать только при помощи двух циклов.
