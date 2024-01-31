@@ -4,7 +4,7 @@ https://www.youtube.com/playlist?list=PLeqyOOqxeiIPr0w-njMVR2sWVWf6cWlqL
 !!!		С сегодняшнего дня все домашние задания отправляются в виде ссылки на GitHub	!!!
 
 TODO:
-1. 
+Прислать ссылку на свой GitHub;
 
 DONE:
 1. https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/ChessBoard.jpg;
