@@ -47,8 +47,8 @@ void main()
 
 int Sum(int a, int b)	//Реализация функции (Определение функции - Function definition)
 {
-	int c = a + b;
-	return c;
+	int d = a + b;
+	return d;
 }
 int Diff(int a, int b)
 {

@@ -15,3 +15,8 @@ name - имя функции.
 parameters - список принимаемых параметров функции.
 
 Global scope
+
+type Function(int arr);		//Функция принимает переменную типа 'int'
+type Function(int arr[]);	//Функция принимает массив типа 'int'
+
+void FillRand(int arr[], const int n);
