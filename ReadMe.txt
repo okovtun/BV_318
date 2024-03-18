@@ -2,7 +2,7 @@
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIPr0w-njMVR2sWVWf6cWlqL
 
 TODO:
-0. Зарегистрироваться в Discord: https://discord.com/;
+0. Зарегистрироваться в Discord:   https://discord.com/;
 1. Сделать commit и создать ветку 'FunctionsOverloading';
 2. На ветке 'FunctionsOverloading', в проете 'Functions\Arrays' 
    перегрузить все функции для типов данных 'int', 'double' и 'char';
