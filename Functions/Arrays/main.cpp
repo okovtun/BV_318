@@ -33,11 +33,14 @@ void shiftLeft(int arr[ROWS][COLS], const int ROWS, const int COLS, int number_o
 void shiftRight(int arr[], const int n, const int number_of_shifts);
 void shiftRight(int arr[ROWS][COLS], const int ROWS, const int COLS, int number_of_shifts);
 
+void Sort(int arr[], const int n);
+
 void main()
 {
 	setlocale(LC_ALL, "");
 	const int I_SIZE = 10;
 	int i_arr[I_SIZE];
+	i_arr[-1] = 0;
 
 	/*int minRand, maxRand;
 	do
@@ -53,6 +56,8 @@ void main()
 	cout << "Среднее-арифметическое элементов массива: " << Avg(i_arr, I_SIZE) << endl;
 	cout << "Минимальное значение в массиве: " << minValueIn(i_arr, I_SIZE) << endl;
 	cout << "Максимальное значение в массиве: " << maxValueIn(i_arr, I_SIZE) << endl;
+	Sort(i_arr, I_SIZE);
+	Print(i_arr, I_SIZE);
 	int number_of_shifts;
 	cout << "Введите количество сдвигов: "; cin >> number_of_shifts;
 	shiftRight(i_arr, I_SIZE, number_of_shifts);
@@ -273,4 +278,25 @@ void shiftRight(int arr[], const int n, const int number_of_shifts)
 void shiftRight(int arr[ROWS][COLS], const int ROWS, const int COLS, int number_of_shifts)
 {
 	shiftLeft(arr, ROWS, COLS, ROWS*COLS - number_of_shifts);
+}
+
+void Sort(int arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+		//счетчик 'i' выбирает элемент массива, 
+		//в который будет помощено минимальное значение из всех перебираемых.
+	{
+		for (int j = i + 1; j < n; j++)
+			//счетчик 'j' перебирает оставшиеся элементы массива.
+		{
+			//arr[i] - выбранный элемент.
+			//arr[j] - перебираемый элемент.
+			if (arr[j] < arr[i])
+			{
+				int buffer = arr[i];
+				arr[i] = arr[j];
+				arr[j] = buffer;
+			}
+		}
+	}
 }
