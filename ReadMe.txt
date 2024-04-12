@@ -1,6 +1,9 @@
 ﻿https://github.com/okovtun/BV_318.git
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIPr0w-njMVR2sWVWf6cWlqL
 
+Install:
+https://anydesk.com/en/downloads/windows
+
 TODO:
 0. Зарегистрироваться в Discord:   https://discord.com/;
 1. Сделать commit и создать ветку 'FunctionsOverloading';
@@ -17,7 +20,8 @@ TODO:
 	??? maxValueIn(???);//возвращает максимальное значение в массиве	DONE
 	??? shiftLeft(???);	//циклически сдвигает массив на заданное число элементов влево	DONE
 	??? shiftRight(???);//циклически сдвигает массив на заданное число элементов вправо	DONE
-	??? Sort(???);		//Сортирует массив в порядке возрастания
+	??? Sort(???);		//Сортирует массив в порядке возрастания		DONE
+	??? Unique(???);	//Заполняет массив униакльными случайными числами
 
 
 DONE:
