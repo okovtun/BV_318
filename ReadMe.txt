@@ -5,6 +5,13 @@ Install:
 https://anydesk.com/en/downloads/windows
 
 TODO:
+0. На ветке 'FunctionsSeparation' вынести все остальные функции в соответствующие файлы;
+   СДЕЛАТЬ COMMIT И PUSH;
+1. *На ветке 'master', в проекте 'Functions\Arrays' написать функцию	??? Search(???),
+   которая находит в массиве повторяющиеся элементы, выводит их на экран и выводит 
+   на экран количество их повторений;
+
+DONE:
 0. Зарегистрироваться в Discord:   https://discord.com/;
 1. Сделать commit и создать ветку 'FunctionsOverloading';
 2. На ветке 'FunctionsOverloading', в проете 'Functions\Arrays' 
