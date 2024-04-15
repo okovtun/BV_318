@@ -5,8 +5,8 @@ using namespace std;
 #define tab "\t"
 #define delimiter "\n-----------------------------------------------------\n"
 
-const int ROWS = 10;	//количество строк
-const int COLS = 10; //количество элементов строки
+const int ROWS = 3;	//количество строк
+const int COLS = 4; //количество элементов строки
 
 void FillRand(int arr[], const int n, int minRand = 0, int maxRand = 100);
 void FillRand(double arr[], const int n, int minRand = 0, int maxRand = 100);
@@ -36,6 +36,9 @@ void shiftRight(int arr[ROWS][COLS], const int ROWS, const int COLS, int number_
 void Sort(int arr[], const int n);
 void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS);
 
+void Unique(int arr[], const int n);
+void Unique(int arr[ROWS][COLS], const int ROWS, const int COLS);
+
 void main()
 {
 	setlocale(LC_ALL, "");
@@ -51,7 +54,7 @@ void main()
 		if (minRand == maxRand)cout << "Пределы диапазона не должны совпадать" << endl;
 	} while (minRand == maxRand);*/
 
-	FillRand(i_arr, I_SIZE);
+	Unique(i_arr, I_SIZE);
 	Print(i_arr, I_SIZE);
 	cout << "Сумма элементов массива: " << Sum(i_arr, I_SIZE) << endl;
 	cout << "Среднее-арифметическое элементов массива: " << Avg(i_arr, I_SIZE) << endl;
@@ -73,9 +76,9 @@ void main()
 
 	cout << delimiter << endl;
 
-
 	int i_arr_2[ROWS][COLS];
-	FillRand(i_arr_2, ROWS, COLS);
+	Unique(i_arr_2, ROWS, COLS);
+	//FillRand(i_arr_2, ROWS, COLS);
 	Print(i_arr_2, ROWS, COLS);
 	cout << "Сумма элементов массива: " << Sum(i_arr_2, ROWS, COLS) << endl;
 	cout << "Среднее-арифметическое элементов массива: " << Avg(i_arr_2, ROWS, COLS) << endl;
@@ -86,6 +89,10 @@ void main()
 	//Print(i_arr_2, ROWS, COLS);
 	Sort(i_arr_2, ROWS, COLS);
 	Print(i_arr_2, ROWS, COLS);
+
+	cout << delimiter << endl;
+
+
 }
 
 void FillRand(int arr[], const int n, int minRand, int maxRand)
@@ -348,4 +355,54 @@ void Sort(int arr[ROWS][COLS], const int ROWS, const int COLS)
 	}
 	cout << "Массив отсортирован за " << iterations << " итераций.\n";
 	cout << "При этом было выполнено " << exchanges << " обменов элементов.\n";
+}
+
+void Unique(int arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		bool unique;
+		do
+		{
+			arr[i] = rand() % n;
+			unique = true;	//предполагаем, что сгенерировалось уникальное случайное число,
+			//но это нужно проветрить:
+			for (int j = 0; j < i; j++)
+			{
+				if (arr[i] == arr[j])
+				{
+					unique = false;
+					break;
+				}
+			}
+		} while (!unique);
+	}
+}
+void Unique(int arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			bool unique;
+			do
+			{
+				arr[i][j] = rand() % (ROWS*COLS);
+				unique = true;	//преположим, что сгенерировалось униакльное случайное число,
+				//но это нужно проветрить:
+				for (int k = 0; k <= i; k++)
+				{
+					for (int l = 0; l < (k == i ? j : COLS); l++)
+					{
+						if (arr[i][j] == arr[k][l])
+						{
+							unique = false;
+							break;
+						}
+					}
+					if (!unique)break;
+				}
+			} while (!unique);
+		}
+	}
 }
