@@ -5,6 +5,12 @@ Install:
 https://anydesk.com/en/downloads/windows
 
 TODO:
+1. Шаблонизировать все оставшиеся функции;
+	!!! СДЕЛАТЬ COMMIT И PUSH !!!
+2. От ветки 'FunctionTemplates' создать ветку 'SeparatedTemplates' 
+   и в ней вынести шаблонные функции в отдельные файлы;
+
+DONE:
 0. На ветке 'FunctionsSeparation' вынести все остальные функции в соответствующие файлы;
    СДЕЛАТЬ COMMIT И PUSH;
 1. *На ветке 'master', в проекте 'Functions\Arrays' написать функцию	??? Search(???),
