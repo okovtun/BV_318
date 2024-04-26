@@ -1,5 +1,6 @@
 ﻿https://github.com/okovtun/BV_318.git
 https://www.youtube.com/playlist?list=PLeqyOOqxeiIPr0w-njMVR2sWVWf6cWlqL
+https://chat.whatsapp.com/KhU5DwD5zLNGATggxCkI0Q
 
 Install:
 https://anydesk.com/en/downloads/windows
