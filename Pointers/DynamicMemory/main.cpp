@@ -23,10 +23,13 @@ int* pop_back(int arr[], int& n);
 //pop
 
 int** push_row_back(int** arr, int& rows, const int cols);
+int** pop_row_back(int** arr, int& rows, const int cols);
+
+void push_col_back(int** arr, const int rows, int& cols);
 
 //#define DYNAMIC_MEMORY_1
-//#define DYNAMIC_MEMORY_2
-#define PREFORMANCE_CHECK
+#define DYNAMIC_MEMORY_2
+//#define PREFORMANCE_CHECK
 
 void main()
 {
@@ -68,6 +71,12 @@ void main()
 
 	arr = push_row_back(arr, rows, cols);
 	FillRand(arr[rows - 1], cols, 100, 1000);
+	Print(arr, rows, cols);
+
+	arr = pop_row_back(arr, rows, cols);
+	Print(arr, rows, cols);
+
+	push_col_back(arr, rows, cols);
 	Print(arr, rows, cols);
 
 	Clear(arr, rows);
@@ -222,4 +231,29 @@ int** push_row_back(int** arr, int& rows, const int cols)
 	rows++;
 
 	return buffer;
+}
+
+int** pop_row_back(int** arr, int& rows, const int cols)
+{
+	int** buffer = new int*[--rows];
+	for (int i = 0; i < rows; i++)buffer[i] = arr[i];
+	delete[] arr[rows];	//!!! Удаляем удаляемую строку из памяти !!!
+	delete[] arr;
+	return buffer;
+}
+
+void push_col_back(int** arr, const int rows, int& cols)
+{
+	for (int i = 0; i < rows; i++)
+	{
+		//1) Создаем буферную строку:
+		int* buffer = new int[cols + 1]{};
+		//2) Копируем значения из исходной строки в буферную:
+		for (int j = 0; j < cols; j++)buffer[j] = arr[i][j];
+		//3) Удаляем исходную строку:
+		delete[] arr[i];
+		//4) Подменяем адрес строки в массиве указателей:
+		arr[i] = buffer;
+	}
+	cols++;
 }
