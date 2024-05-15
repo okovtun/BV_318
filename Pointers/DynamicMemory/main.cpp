@@ -11,13 +11,21 @@ int** Allocate(const int rows, const int cols);
 void  Clear(int** arr, const int rows);
 
 void FillRand(int arr[], const int n, int minRand = 0, int maxRand = 100);
+void FillRand(double arr[], const int n, int minRand = 0, int maxRand = 100);
+void FillRand(char arr[], const int n);
 void FillRand(int** arr, const int rows, const int cols);
-void Print(int arr[], const int n);
-void Print(int** arr, const int rows, const int cols);
 
-int* push_back(int arr[], int& n, int value);
-int* push_front(int arr[], int& n, int value);
-int* pop_back(int arr[], int& n);
+template<typename T>
+void Print(T arr[], const int n);
+template<typename T>
+void Print(T** arr, const int rows, const int cols);
+
+template<typename T>
+T* push_back(T arr[], int& n, T value);
+template<typename T>
+T* push_front(T arr[], int& n, T value);
+template<typename T>
+T* pop_back(T arr[], int& n);
 //Stack - это модель памяти, из которой последний записанный элемент считывается первым.
 //push
 //pop
@@ -27,8 +35,8 @@ int** pop_row_back(int** arr, int& rows, const int cols);
 
 void push_col_back(int** arr, const int rows, int& cols);
 
-//#define DYNAMIC_MEMORY_1
-#define DYNAMIC_MEMORY_2
+#define DYNAMIC_MEMORY_1
+//#define DYNAMIC_MEMORY_2
 //#define PREFORMANCE_CHECK
 
 void main()
@@ -37,12 +45,13 @@ void main()
 #ifdef DYNAMIC_MEMORY_1
 	int n;
 	cout << "Введите размер массива: "; cin >> n;
-	int* arr = new int[n];
+	typedef char DataType;
+	DataType* arr = new DataType[n];
 
 	FillRand(arr, n);
 	Print(arr, n);
 
-	int value;
+	DataType value;
 	cout << "Введите добавляемое значение: "; cin >> value;
 	cout << &n << endl;
 	arr = push_back(arr, n, value);
@@ -134,6 +143,26 @@ void FillRand(int arr[], const int n, int minRand, int maxRand)
 		*(arr + i) = rand() % (maxRand - minRand) + minRand;
 	}
 }
+void FillRand(double arr[], const int n, int minRand, int maxRand)
+{
+	minRand *= 100;
+	maxRand *= 100;
+	for (int i = 0; i < n; i++)
+	{
+		//Обращение к элементам массива через арифметику указателей 
+		//и оператор разыменования:
+		*(arr + i) = rand() % (maxRand - minRand) + minRand;
+		*(arr + i) /= 100;
+	}
+}
+void FillRand(char arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		*(arr + i) = rand();
+	}
+}
+
 void FillRand(int** arr, const int rows, const int cols)
 
 {
@@ -147,7 +176,7 @@ void FillRand(int** arr, const int rows, const int cols)
 
 }
 
-void Print(int arr[], const int n)
+template<typename T>void Print(T arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -156,7 +185,8 @@ void Print(int arr[], const int n)
 	}
 	cout << endl;
 }
-void Print(int** arr, const int rows, const int cols)
+template<typename T>
+void Print(T** arr, const int rows, const int cols)
 {
 	for (int i = 0; i < rows; i++)
 	{
@@ -169,12 +199,13 @@ void Print(int** arr, const int rows, const int cols)
 	cout << endl;
 }
 
-int* push_back(int arr[], int& n, int value)
+template<typename T>
+T* push_back(T arr[], int& n, T value)
 {
 	cout << &n << endl;
 	//////////////////////////////////////////////
 		//1) Создаем буферный массив нужного размера:
-	int* buffer = new int[n + 1];
+	T* buffer = new T[n + 1];
 	//2) Копируем значения из исходного массива в буферный:
 	for (int i = 0; i < n; i++)
 	{
@@ -192,9 +223,10 @@ int* push_back(int arr[], int& n, int value)
 	//Print(arr, n);
 	return arr;
 }
-int* push_front(int arr[], int& n, int value)
+template<typename T>
+T* push_front(T arr[], int& n, T value)
 {
-	int* buffer = new int[n + 1];
+	T* buffer = new T[n + 1];
 	for (int i = 0; i < n; i++)
 	{
 		buffer[i + 1] = arr[i];
@@ -205,9 +237,10 @@ int* push_front(int arr[], int& n, int value)
 	return buffer;
 }
 
-int* pop_back(int arr[], int& n)
+template<typename T>
+T* pop_back(T arr[], int& n)
 {
-	int* buffer = new int[--n];
+	T* buffer = new T[--n];
 	for (int i = 0; i < n; i++)buffer[i] = arr[i];
 	delete[] arr;
 	return buffer;
